@@ -1,9 +1,23 @@
-userWord = prompt("Inserisci una parola per verificare se è palindroma");
-invertedWord = reverseWords(userWord);
+// DATI
+const userWord = prompt("Inserisci una parola per verificare se è palindroma").toLowerCase();
+let invertedWord = reverseWords(userWord);
 
-console.log(userWord);
-console.log(invertedWord);
+console.log("user Word:", userWord);
+console.log("inverted Word:", invertedWord);
 
-isPalindrome = palindromeCheck(userWord, invertedWord);
 
-console.log(isPalindrome);
+let isPalindrome = palindromeCheck(userWord, invertedWord);
+
+console.log("isPalindrome", isPalindrome);
+
+// OUTPUT
+let message = '';
+
+if(isPalindrome) {
+    message = `La parola "${userWord}" è Palindroma.`;
+}
+else {
+    message = `La parola "${userWord}" non è Palindroma.`;
+}
+
+document.writeln(message);
