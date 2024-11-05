@@ -8,5 +8,9 @@ function reverseWords(word) {
 }
 
 function palindromeCheck(word, invertedWord) {
-    
+    isPalindrome = false;
+    if (word === invertedWord){
+        isPalindrome = true;
+    }
+    return isPalindrome;
 }
